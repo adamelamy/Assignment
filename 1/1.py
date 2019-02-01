@@ -66,9 +66,9 @@ def isInPlainRange(p):
     return True
 
 def testKey(encryptedText, maxKeyLength):
-    keyChars = []
-    for i in range(0x5F, 0x60):
-        keyChars.append(chr(i))
+    keyChars = ['L']#[0x5F,0x4C,0x4C,0x4C,0x4C,0x4C,0x4C,0x5F]
+    # for i in range(0x5F, 0x60):
+    #     keyChars.append(chr(i))
 
     for i in range(1, maxKeyLength + 1):
         print(i)
@@ -92,10 +92,21 @@ def frequency(text):
     sortedFreq = sorted(freq.items(), key=lambda kv: kv[1], reverse=True)
     return sortedFreq
 
+def decrypt_with_key(ciphertext,key):
+    key_list = list(key)
+    result = ""
+    for i in range(len(ciphertext)):
+        result += chr(decryptChar(ciphertext[i],ord(key_list[i%8])))
+    return result
+
 file = open("ciphertext1", "rb")
 encryptedText = file.read()
-maxKeyLength = 1
-dText = testKey(encryptedText, maxKeyLength)
-testFile = open("test.txt", "wb")
-testFile.write(dText.encode('charmap'))
-#print(frequency(encryptedText))
+maxKeyLength = 8
+#dText = testKey(encryptedText, maxKeyLength)
+
+# dText = decrypt_with_key(encryptedText,"_LitFuT_")
+# testFile = open("test.txt", "wb")
+# testFile.write(dText.encode('charmap'))
+
+print(frequency(encryptedText))
+# print(hex(decryptChar(0xda,ord("_"))))
