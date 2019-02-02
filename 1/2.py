@@ -39,16 +39,16 @@ def format_formats_to_hex():
         raw_formats[i][1] = hex_list
     return raw_formats
 
-def get_key(cipher_list, cipher_text):
+def get_key(cipher_text, plain_text):
     key_list = []
     key_string = ''
-    for i in range (0,len(cipher_list)-1,2):
-        key = match_cipher_to_map(cipher_list[i],cipher_list[i+1],cipher_text[i],cipher_text[i+1])
+    for i in range (0,len(plain_text)-1,2):
+        key = match_cipher_to_map(cipher_text[i],cipher_text[i+1],plain_text[i],plain_text[i+1])
         if key:
             key_list.extend(key)
         else:
-            return
-    for x in key:
+            key_list.extend([0,9])
+    for x in key_list:
         key_string = key_string + hex(x)[-1]
     key_string = bytes.fromhex(key_string).decode('ascii')
     return key_string
@@ -61,7 +61,6 @@ def match_cipher_to_map(ch, cl, ph, pl):
     for i in range(16):
         if map[ph][i] == ch:
             key.append(i)
-    print(key)
     key_hex = key[0]*16 + key[1]
     if key_hex >= 32 and key_hex <= 126:
         return key
