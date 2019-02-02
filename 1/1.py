@@ -99,6 +99,7 @@ def decrypt_with_key(ciphertext,key):
         result += chr(decryptChar(ciphertext[i],ord(key_list[i%8])))
     return result
 
+def is_correct(test_result,key_length)
 file = open("ciphertext1", "rb")
 encryptedText = file.read()
 maxKeyLength = 8

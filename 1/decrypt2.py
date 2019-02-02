@@ -32,11 +32,26 @@ def given_plaintext_ciphertext_find_key(plain_text,cipher_text):
     #print(mapping[int(ph,16)])
     first_digit = mapping[int(pl,16)].index(int(cl,16))    
     second_digit = mapping[int(ph,16)].index(int(ch,16))
-    print(first_digit,second_digit)
+    #print(first_digit,second_digit)
     return combine_digit(first_digit,second_digit)
 
-print(chr(int(given_plaintext_ciphertext_find_key(0x20,0xee),16)))
+#print(chr(int(given_plaintext_ciphertext_find_key(0x20,0xee),16)))
 #find key character given plain_text and cipher_text value
 
-format = [[".jpg1", [0xFF,0xD8,0xFF,0xDB]],["jpg2",[0xFF,0xD8,0xFF,0xE0,0x00 ,0x10 ,0x4A ,0x46 ,0x49 ,0x46 ,0x00 ,0x01]],[".jpg3",[0xFF,0xD8,0xFF,0xEE]],["jpg4",[0xFF,0xD8,0xFF,0xE1]],["png",[0x89 ,0x50 ,0x4E ,0x47 ,0x0D ,0x0A ,0x1A ,0x0A]],["pdf",[0x25 ,0x50 ,0x44 ,0x46 ,0x2d]]] 
-for x in format:
+def check_valid(format_header,cipher_header):
+    print(cipher_header[0:10])
+    for i in range(len(format_header)):
+        character = given_plaintext_ciphertext_find_key(format_header[i],cipher_header[i])
+        print("assumption: {}".format(format_header[i]))
+        print("cipher: {}".format(cipher_header[i]))
+        if given_plaintext_ciphertext_find_key(format_header[i],cipher_header[i]) not in range(32,127):
+            return False
+    return True
+
+file = open("ciphertext2", "rb")
+encryptedText = file.read()  
+format_lst = [[".jpg1", [0xFF,0xD8,0xFF,0xDB]],["jpg2",[0xFF,0xD8,0xFF,0xE0,0x00 ,0x10 ,0x4A ,0x46 ,0x49 ,0x46 ,0x00 ,0x01]],[".jpg3",[0xFF,0xD8,0xFF,0xEE]],["jpg4",[0xFF,0xD8,0xFF,0xE1]],["png",[0x89 ,0x50 ,0x4E ,0x47 ,0x0D ,0x0A ,0x1A ,0x0A]],["pdf",[0x25 ,0x50 ,0x44 ,0x46 ,0x2d]]] 
+for file_format in format_lst:
+    if check_valid(file_format[1],encryptedText):
+        print(file_format[0])
+
