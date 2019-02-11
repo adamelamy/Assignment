@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ba3a4095-44c3-42b2-b8d4-de1aa3e3f397</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>1.py</StartupFile>
+    <StartupFile>part3\3.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,12 +22,64 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="1.py" />
+    <Compile Include="2.py" />
+    <Compile Include="decrypt.py" />
+    <Compile Include="decrypt2.py" />
+    <Compile Include="part2.py" />
+    <Compile Include="part3\3.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="part3\readfile.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assignment_1_nonsliding.html" />
     <Content Include="ciphertext1" />
     <Content Include="ciphertext2" />
     <Content Include="ciphertext3" />
+    <Content Include="part3\ciphertext3" />
+    <Content Include="part3\ciphertext3_MODIFIED" />
+    <Content Include="part3\decrypt_salt.sh" />
+    <Content Include="part3\encrypt_salt.sh" />
+    <Content Include="part3\file1" />
+    <Content Include="part3\file1ecb.enc" />
+    <Content Include="part3\file2" />
+    <Content Include="part3\file2ecb.enc" />
+    <Content Include="part3\file3" />
+    <Content Include="part3\file3CBC.enc" />
+    <Content Include="part3\file3CBCerror" />
+    <Content Include="part3\file3CBCerror.enc" />
+    <Content Include="part3\file3CBCerrorsalted" />
+    <Content Include="part3\file3CBCerrorsalted.enc" />
+    <Content Include="part3\file3CBCsalted.enc" />
+    <Content Include="part3\file3CFB.enc" />
+    <Content Include="part3\file3CFBerror" />
+    <Content Include="part3\file3CFBerror.enc" />
+    <Content Include="part3\file3CFBerrorsalted" />
+    <Content Include="part3\file3CFBerrorsalted.enc" />
+    <Content Include="part3\file3CFBsalted.enc" />
+    <Content Include="part3\file3ECB.enc" />
+    <Content Include="part3\file3ECBerror" />
+    <Content Include="part3\file3ECBerror.enc" />
+    <Content Include="part3\file3ECBerrorsalted" />
+    <Content Include="part3\file3ECBerrorsalted.enc" />
+    <Content Include="part3\file3ECBsalted.enc" />
+    <Content Include="part3\file3OFB.enc" />
+    <Content Include="part3\file3OFBerror" />
+    <Content Include="part3\file3OFBerror.enc" />
+    <Content Include="part3\file3OFBerrorsalted" />
+    <Content Include="part3\file3OFBerrorsalted.enc" />
+    <Content Include="part3\file3OFBsalted.enc" />
+    <Content Include="part3\file3Report" />
+    <Content Include="part3\decrypt.sh" />
+    <Content Include="part3\encrypt.sh" />
+    <Content Include="part3\record.txt" />
+    <Content Include="part3\testData" />
+    <Content Include="part3\testData.enc" />
+    <Content Include="part3\testData.out" />
+    <Content Include="test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="part3\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
