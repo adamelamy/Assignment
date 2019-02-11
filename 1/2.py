@@ -31,7 +31,13 @@ def format_formats_to_hex():
     raw_formats = [["gif87a","474946383761"],["gif89a","474946383961"],
                     ["jpg1","FFD8FFDB"],["jpg2","FFD8FFE000104A4649460001"],
                     ["jpg3","FFD8FFEE"],["png","89504E470D0A1A0A"],
-                    ["pdf","255044462d"]]
+                    ["pdf","255044462d"],["midi","4D546864"],["sql","53514c69746520666f726d6174203300"],
+                    ["ico","00000100"],["zip","504B0304"],["rar","526172211A0700"],
+                    ["rar2","526172211A070100"],["wmv","3026B2758E66CF11A6D900AA0062CE6C"],
+                    ["ogg","4F676753"],["iso","4344303031"],["flac","664C6143"],
+                    ["tar1","7573746172003030"],["tar2","7573746172202000"],["7zip","377ABCAF271C"],
+                    ["xz","FD377A585A0000"],["xml","3c3f786d6c20"],["rtf","7B5C72746631"],
+                    ["doc","D0CF11E0A1B11AE1"]]
     for i in range(len(raw_formats)):
         hex_list = []
         for single_hex in list(raw_formats[i][1]):
@@ -47,6 +53,7 @@ def get_key(cipher_text, plain_text):
         if key:
             key_list.extend(key)
         else:
+            return
             key_list.extend([0,9])
     for x in key_list:
         key_string = key_string + hex(x)[-1]
