@@ -37,6 +37,7 @@
     <Content Include="ciphertext2" />
     <Content Include="ciphertext3" />
     <Content Include="part3\ciphertext3" />
+    <Content Include="part3\ciphertext3_bruce_solution" />
     <Content Include="part3\ciphertext3_MODIFIED" />
     <Content Include="part3\decrypt_salt.sh" />
     <Content Include="part3\encrypt_salt.sh" />
