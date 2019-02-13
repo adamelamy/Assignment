@@ -19,6 +19,7 @@ map = ((0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x
 key = []
 
 def format_file_to_hex():
+    # convert ciphertext2 into list of hex
     file = open("ciphertext2",'rb')
     hex_text = file.read()
     hex_list = []
@@ -36,6 +37,7 @@ def format_file_to_hex():
     return hex_list
 
 def format_formats_to_hex():
+    # convert the string of hex into list
     raw_formats = [["gif87a","474946383761"],["gif89a","474946383961"],
                     ["jpg1","FFD8FFDB"],["jpg2","FFD8FFE000104A4649460001"],
                     ["jpg3","FFD8FFEE"],["png","89504E470D0A1A0A"],
@@ -54,6 +56,7 @@ def format_formats_to_hex():
     return raw_formats
 
 def get_key(cipher_text, plain_text):
+    # returns key string if key is printable
     key_list = []
     key_string = ''
     for i in range (0,len(plain_text)-1,2):
@@ -69,6 +72,7 @@ def get_key(cipher_text, plain_text):
     return key_string
 
 def match_cipher_to_map(ch, cl, ph, pl):
+    # gets single key from plaintext and ciphertext char
     key = []
     for j in range(16):
         if map[pl][j] == cl:
@@ -87,6 +91,7 @@ cipher_text = format_file_to_hex()
 formats = format_formats_to_hex()
 
 for format_type in formats:
+    # iterate through all formats, prints printable keys
     printable_key = get_key(cipher_text,format_type[1])
     if printable_key:
         print(format_type[0])

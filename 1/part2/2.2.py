@@ -16,7 +16,8 @@ map = ((0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x
     (0x0, 0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x1 ))
 
 
-def frequency(text):#return list of the frequency of hex pair in descending order
+def frequency(text):
+    #return list of the frequency of hex pair in descending order
     freq = dict()
     for c in text:
         cHex = hex(c)
@@ -48,6 +49,8 @@ def find_repeated_printable(text, length):
     return sortedFreq
 
 def freq_partial_decrypted(text,block_length,key_length):
+    #returns frequency of blocks of "length" for every "key_length" chars
+    #freq of blocks of 4 chars for every 40 chars
     partial_text_char = []
     for i in range(0,len(text)-block_length,key_length):
         partial_text_char.extend(text[i:i+block_length])
@@ -59,23 +62,15 @@ def freq_partial_decrypted(text,block_length,key_length):
     return partial_freq
 
 def freq_specific_pos(text, pos, key_length):
+    #returns frequency of a specific column out of "key_length" (40)
     pos_text = []
     for i in range(0+pos, len(text), key_length):
         pos_text.append(text[i])
-    pos_freq = frequency(pos_text)
-    # decrypted_char = decrypt_with_key(pos_text,single_key)    
+    pos_freq = frequency(pos_text)  
     return pos_freq
 
-# def count_printable(text):
-#     printable_count = 0
-#     total_count = 0
-#     for c in text:
-#         if ord(c)>=32 and ord(c)<=126:
-#             printable_count += 1
-#         total_count += 1
-#     return round(printable_count/total_count,100)
-
 def key_from_mapping(cipher,plain):
+    #gets single key from plain, cipher
     ch = int(cipher[2],16)
     cl = int(cipher[3],16)
     ph = int(plain[2],16)
@@ -98,6 +93,7 @@ def key_from_mapping(cipher,plain):
         return False
 
 def decrypt_with_key(ciphertext,key):
+    #decrypts ciphertext with key
     key_list = list(key)
     result = ""
     for i in range(len(ciphertext)):
