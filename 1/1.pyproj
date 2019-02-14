@@ -42,9 +42,9 @@
     <Content Include="ciphertext3" />
     <Content Include="part2\ciphertext2" />
     <Content Include="part2\p2_file.zip" />
-    <Content Include="part2\part2_report.md" />
+    <Content Include="part2_report.md" />
     <Content Include="part2\test_p2.zip" />
-    <Content Include="part3\part3_report.md" />
+    <Content Include="part3_report.md" />
     <Content Include="part3\ciphertext3" />
     <Content Include="part3\ciphertext3_MODIFIED" />
     <Content Include="part3\decrypt_salt.sh" />
