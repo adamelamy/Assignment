@@ -28,6 +28,8 @@
     <Compile Include="decrypt.py" />
     <Compile Include="decrypt2.py" />
     <Compile Include="part2.py" />
+    <Compile Include="part2\2.1.py" />
+    <Compile Include="part2\2.2.py" />
     <Compile Include="part3\3.py">
       <SubType>Code</SubType>
     </Compile>
@@ -38,7 +40,11 @@
     <Content Include="ciphertext1" />
     <Content Include="ciphertext2" />
     <Content Include="ciphertext3" />
-    <Content Include="part3\answers1-2.md" />
+    <Content Include="part2\ciphertext2" />
+    <Content Include="part2\p2_file.zip" />
+    <Content Include="part2\part2_report.md" />
+    <Content Include="part2\test_p2.zip" />
+    <Content Include="part3\part3_report.md" />
     <Content Include="part3\ciphertext3" />
     <Content Include="part3\ciphertext3_MODIFIED" />
     <Content Include="part3\decrypt_salt.sh" />
@@ -118,7 +124,6 @@
     <Content Include="part3\file3OFBerrorsalted" />
     <Content Include="part3\file3OFBerrorsalted.enc" />
     <Content Include="part3\file3OFBsalted.enc" />
-    <Content Include="part3\file3Report" />
     <Content Include="part3\decrypt.sh" />
     <Content Include="part3\encrypt.sh" />
     <Content Include="part3\RawReport" />
@@ -131,6 +136,7 @@
     <Content Include="test.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="part2\" />
     <Folder Include="part3\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

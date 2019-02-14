@@ -21,6 +21,7 @@ def makeErrorFile(fileNumber, method, suffix = ""):
         content = bytearray(file.read())
         with open("file" + str(fileNumber) + method + "error" + suffix + ".enc", "wb") as errorFile:
             errorLocation = int(len(content) / 2)
+            print("Error Pos for file" + str(fileNumber) + method + suffix + ": " + hex(errorLocation))
             content[errorLocation] = operator.xor(content[errorLocation], 0xFF)
             errorFile.write(content)
 
@@ -86,7 +87,7 @@ def compareError(fileNumber, method, suffix = ""):
 
 with open("file3", "w") as file:
     random.seed(42)
-    file.write(getRandomASCIIString(512))
+    file.write(getRandomASCIIString(513))
 
 # No Salt
 
