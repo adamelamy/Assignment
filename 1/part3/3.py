@@ -121,7 +121,7 @@ os.system("./encrypt_salt.sh")
 for i in range(1, 4):
     with open("file" + str(i), "rb") as file:
         originalContent = bytearray(file.read())
-        print("Original: " + str(len(originalContent)))
+        print("Original file" + str(i) + ": " + hex(len(originalContent)))
     for method in METHODS:
         printFileLength(i, method, suffix = "salted")
 
