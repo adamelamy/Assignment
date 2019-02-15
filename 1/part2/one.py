@@ -87,15 +87,16 @@ def match_cipher_to_map(ch, cl, ph, pl):
         return False
 
 
-cipher_text = format_file_to_hex()
-formats = format_formats_to_hex()
+def main():
+    cipher_text = format_file_to_hex()
+    formats = format_formats_to_hex()
 
-for format_type in formats:
-    # iterate through all formats, prints printable keys
-    printable_key = get_key(cipher_text,format_type[1])
-    if printable_key:
-        print(format_type[0])
-        print(printable_key)
+    for format_type in formats:
+        # iterate through all formats, prints printable keys
+        printable_key = get_key(cipher_text,format_type[1])
+        if printable_key:
+            print(format_type[0])
+            print(printable_key)
 
 
 

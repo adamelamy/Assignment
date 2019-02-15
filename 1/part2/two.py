@@ -114,60 +114,60 @@ def findPlainChar(e, k):
         row = map[i]
         if row[k] == e:
             return i
+def main():
+    file = open ('ciphertext2','rb')
+    text = file.read()
+    file.close()
+    key="[95w"
+    partial_text = decrypt_with_key(text,key)
 
-file = open ('ciphertext2','rb')
-text = file.read()
-file.close()
-key="[95w"
-partial_text = decrypt_with_key(text,key)
+    printable_freq = find_repeated_printable(partial_text, len(key))
+    key_length = printable_freq[0][0]
+    partial_frequency = freq_partial_decrypted(partial_text, len(key), key_length)
 
-printable_freq = find_repeated_printable(partial_text, len(key))
-key_length = printable_freq[0][0]
-partial_frequency = freq_partial_decrypted(partial_text, len(key), key_length)
-
-for i in range(4,key_length):
-    pos_freq = freq_specific_pos(text, i, key_length)
-    j = 0
-    single_key = key_from_mapping(pos_freq[j][0], partial_frequency[0][0])
-    while single_key == False:
-        j=+1
+    for i in range(4,key_length):
+        pos_freq = freq_specific_pos(text, i, key_length)
+        j = 0
         single_key = key_from_mapping(pos_freq[j][0], partial_frequency[0][0])
-    key = key + single_key
-dText = decrypt_with_key(text, key)
-testFile = open("test_p2.zip", "wb")
-testFile.write(dText.encode('charmap'))
-testFile.close()
+        while single_key == False:
+            j=+1
+            single_key = key_from_mapping(pos_freq[j][0], partial_frequency[0][0])
+        key = key + single_key
+    dText = decrypt_with_key(text, key)
+    testFile = open("test_p2.zip", "wb")
+    testFile.write(dText.encode('charmap'))
+    testFile.close()
 
-'''
-Using the key '[95wJL4PiE)7u^P-Q(%^-_254dh1F@@nn%128e2o' and looking at the
-output file using xxd, most of the file is decrypted. However, there are  2 
-specific columns, columns 34 and 39, that were decrypted wrongly. This can be 
-seen from common words such as gradient, window, format etc being spelt wrongly
-and these mistakes appears only on column 34 and 39. We will manually fix this
-below
-'''
+    '''
+    Using the key '[95wJL4PiE)7u^P-Q(%^-_254dh1F@@nn%128e2o' and looking at the
+    output file using xxd, most of the file is decrypted. However, there are  2 
+    specific columns, columns 34 and 39, that were decrypted wrongly. This can be 
+    seen from common words such as gradient, window, format etc being spelt wrongly
+    and these mistakes appears only on column 34 and 39. We will manually fix this
+    below
+    '''
 
-pos_freq = freq_specific_pos(text, 33, key_length)
+    pos_freq = freq_specific_pos(text, 33, key_length)
 
-'''
-Instead of mapping the most frequent hex to 'space' (most freq in partial plaintext),
-we try the second most frequent hex (0xae)
-'''
+    '''
+    Instead of mapping the most frequent hex to 'space' (most freq in partial plaintext),
+    we try the second most frequent hex (0xae)
+    '''
 
-single_key_33 = key_from_mapping(pos_freq[1][0], partial_frequency[0][0])
+    single_key_33 = key_from_mapping(pos_freq[1][0], partial_frequency[0][0])
 
-''' Do the same thing for column 39 '''
+    ''' Do the same thing for column 39 '''
 
-pos_freq = freq_specific_pos(text, 38, key_length)
-single_key_38 = key_from_mapping(pos_freq[1][0], partial_frequency[0][0])
+    pos_freq = freq_specific_pos(text, 38, key_length)
+    single_key_38 = key_from_mapping(pos_freq[1][0], partial_frequency[0][0])
 
-''' Test new key '''
+    ''' Test new key '''
 
-new_key = key[:33] + single_key_33 + key[34:38] + single_key_38 + key[39:]
-print(new_key)
-dText = decrypt_with_key(text, new_key)
-testFile = open("p2_file.zip", "wb")
-testFile.write(dText.encode('charmap'))
-testFile.close()
+    new_key = key[:33] + single_key_33 + key[34:38] + single_key_38 + key[39:]
+    print(new_key)
+    dText = decrypt_with_key(text, new_key)
+    testFile = open("p2_file.zip", "wb")
+    testFile.write(dText.encode('charmap'))
+    testFile.close()
 
-''' Fully decrypted! zip file with a single svg file "LLVM_Logo.svg" '''
+    ''' Fully decrypted! zip file with a single svg file "LLVM_Logo.svg" '''
