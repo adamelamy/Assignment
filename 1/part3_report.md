@@ -82,9 +82,9 @@ Comparing file3OFB
 
 ## Salt
 
-Corruptions now happen before the corrupted bytes.
+Corruptions now happen before the corrupted bytes (16 bytes ahead).
 This is most likely due to SALTED__(8 bytes) being added at the start of the file.
-The actual 8 bytes salt is added at the end of the file.
+The actual 8 bytes salt is added after SALTED__.
 
 ### File3 Salt Error Data:
 File Size:<br>
