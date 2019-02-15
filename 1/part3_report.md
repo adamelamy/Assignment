@@ -24,4 +24,5 @@ Replacing a byte won't corrupt the entire fill for CBC, CFB and OFB since no byt
 ## Salt
 
 Corruptions now happen before the corrupted bytes.
-This is most likely due to salt being added at the start of the file.
+This is most likely due to SALTED__(8 bytes) being added at the start of the file.
+The actual 8 bytes salt is added at the end of the file.
