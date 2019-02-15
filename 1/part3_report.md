@@ -7,7 +7,7 @@ CFB and OFB do not pad output files.
 
 ## Pattern:
 
-For file1 and file2 ECB, a pattern repeats itself for every 8 bytes and 16 bytes respectively.
+For file1 and file2 ECB, a pattern repeats itself for every 8 bytes and 24 bytes respectively. This is due to ECB encrypts in 8 bytes segements which breaks 12 bytes into 3 8 bytes for file 2.
 ECB does not change internal parameters as more data encrypts.
 
 All other three algorithms do change their internal parameters so there is no repetition.
