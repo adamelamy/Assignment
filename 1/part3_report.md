@@ -7,7 +7,7 @@ CFB and OFB do not pad output files.
 
 ## Pattern:
 
-For file1 and file2 ECB, a pattern repeats itself for every 8 bytes and 16 bytes respectively.
+For file1 and file2 ECB, a pattern repeats itself for every 8 bytes and 24 bytes respectively. This is due to ECB encrypts in 8 bytes segements which breaks 12 bytes into 3 8 bytes for file 2.
 ECB does not change internal parameters as more data encrypts.
 
 All other three algorithms do change their internal parameters so there is no repetition.
@@ -24,4 +24,5 @@ Replacing a byte won't corrupt the entire fill for CBC, CFB and OFB since no byt
 ## Salt
 
 Corruptions now happen before the corrupted bytes.
-This is most likely due to salt being added at the start of the file.
+This is most likely due to SALTED__(8 bytes) being added at the start of the file.
+The actual 8 bytes salt is added at the end of the file.
