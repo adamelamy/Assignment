@@ -1,9 +1,6 @@
 import itertools
 
-#top frequent letter in English text
 frequent_char = [' ','e','t','a']
-
-#mapping stored in a 2D list
 map = [[0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x1, 0x0 ],   
                 [0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x1, 0x0, 0x8 ],   
                 [0x1, 0x0, 0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3 ],  
@@ -21,8 +18,13 @@ map = [[0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x
                 [0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x1, 0x0, 0x8, 0x9 ],   
                 [0x0, 0x8, 0x9, 0xb, 0xa, 0xe, 0xf, 0xd, 0xc, 0x4, 0x5, 0x7, 0x6, 0x2, 0x3, 0x1 ]]
 
+#def encryptChar(char, key):
+#    cl = char ^ 0x0F
+#    ch = char >> 4
+#    kl = key ^ 0x0F
+#    kh = key >> 4
+
 def decryptChar(encrypted, key):
-#returns the decrypted character given a cipher character and its key
     el = encrypted & 0x0F
     eh = encrypted >> 4
     kl = key & 0x0F
@@ -45,9 +47,42 @@ def decrypt(encryptedText, key):
         p = decryptChar(c, k)
         print(chr(p), end='')
 
+# def decryptTest(encryptedText, key):
+#     dText = ""
+#     for i in range(len(encryptedText)):
+#         c = encryptedText[i]
+    
+#         k = ord(key[i % len(key)])
+#         p = decryptChar(c, k)
+#         if not isInPlainRange(p):
+#             return -1
+#         dText += chr(p)
 
-def frequency(text):
-#returns list of the frequency of hex pair in descending order
+#     return dText
+
+# def isInPlainRange(p):
+#     return True
+#     if(p < 0x20 or p > 0x7E):
+#         return False
+#     return True
+
+# def testKey(encryptedText, maxKeyLength):
+#     keyChars = ['L']#[0x5F,0x4C,0x4C,0x4C,0x4C,0x4C,0x4C,0x5F]
+#     # for i in range(0x5F, 0x60):
+#     #     keyChars.append(chr(i))
+
+#     for i in range(1, maxKeyLength + 1):
+#         print(i)
+#         for combination in itertools.product(keyChars, repeat=i):
+#             key = "".join(combination)
+#             print(key)
+#             dText = decryptTest(encryptedText, key)
+#             if(dText != -1):
+#                 print(key)
+#                 print(dText)
+#                 return dText
+
+def frequency(text):#return list of the frequency of hex pair in descending order
     freq = dict()
     for c in text:
         cHex = hex(c)
@@ -59,7 +94,6 @@ def frequency(text):
     return sortedFreq
 
 def decrypt_with_key(ciphertext,key):
-# decrypts ciphertext with key and returnt the result
     key_list = list(key)
     result = ""
     for i in range(len(ciphertext)):
@@ -67,19 +101,16 @@ def decrypt_with_key(ciphertext,key):
     return result
 
 def split_digit(number):
-# splite the 2 byte hex into first and second digit
     digit1 = number//16
     digit2 = number%16
     return hex(digit1),hex(digit2)
 
 def combine_digit(digit1,digit2):
-# calculate the hex with the given number as first and second digit
     return hex(digit1*16+digit2)
 
 
 
 def given_plaintext_ciphertext_find_key(plain_text,cipher_text):
-# returns key under assumption the plain_text has been encrypted to the ciphertext 
     ph,pl = split_digit(ord(plain_text))
     ch,cl = split_digit(int(cipher_text,16))
     #print(map[int(ph,16)])
@@ -88,6 +119,7 @@ def given_plaintext_ciphertext_find_key(plain_text,cipher_text):
     #print(first_digit,second_digit)
     return chr(int(combine_digit(first_digit,second_digit),16))
 
+#print(chr(int(given_plaintext_ciphertext_find_key(0x20,0xee),16)))
 
 def check_valid_key_letter(key_letter,cipher_letter):
     #check if the key and cipherletter can deduce a printable plaintext letter or not
@@ -102,7 +134,6 @@ def check_valid_key_letter(key_letter,cipher_letter):
     return True
 
 def find_more_key_letter(key,cipher_letter,cipher_text):
-# iterate through the unknown values of the given marked as "?" and returns the valid key letter
     key_letter = "\n"
     index = 0
     valid_key_letter = []
@@ -120,8 +151,6 @@ def find_more_key_letter(key,cipher_letter,cipher_text):
     return valid_key_letter
 
 def check_valid_at_position(key_letter,index,cipher_text):
-# check a key letter is valid by decrypt the cipher_text at index, returns 
-# true if all decipherd letter is printable
     pointer = index
     counter = 0
     while pointer<len(cipher_text):
@@ -134,6 +163,12 @@ def check_valid_at_position(key_letter,index,cipher_text):
         counter+=1
     return True
 
+#maxKeyLength = 8
+#dText = testKey(encryptedText, maxKeyLength)
+
+# dText = decrypt_with_key(encryptedText,"_LitFuT_")
+# testFile = open("test.txt", "wb")
+# testFile.write(dText.encode('charmap'))
 
 file = open("ciphertext1", "rb")
 encryptedText = file.read()
@@ -161,7 +196,7 @@ while ("?" in key):
 print(key)
 
 dText = decrypt_with_key(encryptedText,key)
-testFile = open("plaintext.txt", "wb")
+testFile = open("test.txt", "wb")
 testFile.write(dText.encode('charmap'))
 
 # print(hex(decryptChar(0xda,ord("_"))))
