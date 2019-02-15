@@ -44,6 +44,8 @@
     <Content Include="part2\p2_file.zip" />
     <Content Include="part2_report.md" />
     <Content Include="part2\test_p2.zip" />
+    <Content Include="part3\file1ECB.enc" />
+    <Content Include="part3\file2ECB.enc" />
     <Content Include="part3_report.md" />
     <Content Include="part3\ciphertext3" />
     <Content Include="part3\ciphertext3_MODIFIED" />

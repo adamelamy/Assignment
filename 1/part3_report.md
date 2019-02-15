@@ -1,4 +1,5 @@
 ## Full Data Can Be Checked In part3/RawReport
+## Raw Report Can be Regenerated Running part3/3.py
 ## File Size:
 
 Both CBC and EBC pads the files to 8 bytes blocks.
