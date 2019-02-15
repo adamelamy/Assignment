@@ -1,3 +1,4 @@
+## Full Data Can Be Checked In part3/RawReport
 ## File Size:
 
 Both CBC and EBC pads the files to 8 bytes blocks.
@@ -133,7 +134,7 @@ Comparing file3ECBsalted
 >>		0xec 0xf4 0x10 0x6 0x89 0x22 0x8 0x98
 
 
-Comparing file3OFBsaltedv
+Comparing file3OFBsalted
 >Pos From: 0xf8 To: 0xf8 <br>
 >	Original:
 >>		0x76 
