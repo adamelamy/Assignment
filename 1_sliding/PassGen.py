@@ -4,7 +4,7 @@ import sys
 HEX_CHARSET = "0123456789abcdef"
 
 def hex():
-    count = 16 ** 7
+    count = 0
     charsetLength = len(HEX_CHARSET)
     while (count < (16 ** 16)):
         password = ""

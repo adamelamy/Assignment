@@ -9,6 +9,7 @@ python3 .\PassGen.py french | john --stdin .\hashes_linux.txt
 $1$I8kZvQEu$qxLLGYz2upD0KD/xOMoYk1
 5e22a8b0
 python3 .\PassGen.py hex | john --stdin .\hashes_linux.txt
+9.7 Hours
 
 $1$mhd/ynSi$BJeU4IONenaV3UMACxebM/
 
