@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/1_sliding/JohnTheRipper_Windows
+/1_sliding/hashcat-5.1.0
+/1_sliding/JohnTheRipper

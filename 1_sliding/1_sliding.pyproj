@@ -21,12 +21,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PassGen.py" />
     <Compile Include="_1_sliding.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="assignment_1_sliding.html" />
+    <Content Include="english.txt" />
+    <Content Include="english_small.txt" />
+    <Content Include="english_tiny.txt" />
+    <Content Include="francais.txt" />
     <Content Include="group_hashes_19.txt" />
     <Content Include="group_hashes_winnt_19.txt" />
+    <Content Include="hashes_linux.txt" />
+    <Content Include="hashes_linux_result.txt" />
+    <Content Include="hashes_linux_unsolved.txt" />
+    <Content Include="hashes_windows.txt" />
+    <Content Include="hashes_windows_result.txt" />
+    <Content Include="hashes_windows_unsolved.txt" />
+    <Content Include="novelist.txt" />
+    <Content Include="triatheletes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
