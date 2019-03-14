@@ -1,9 +1,11 @@
 5FFEFBE2116A6921E5097CFFA8459B70
 MANAGER
 python3 .\PassGen.py english | john --format=NT --stdin .\hashes_windows.txt
+Less than 1 Minute
 
 7F4444685F1296FC5052DA157C24310A
 
 B00C82B8DF872377447E79D6917732B3
 SarahKlassen
 python3 .\PassGen.py novelist | john --format=NT --stdin .\hashes_windows.txt
+Less than 1 Minute

@@ -38,7 +38,15 @@
     <Content Include="hashes_windows.txt" />
     <Content Include="hashes_windows_result.txt" />
     <Content Include="hashes_windows_unsolved.txt" />
+    <Content Include="john-local.conf" />
     <Content Include="novelist.txt" />
+    <Content Include="pass.chr" />
+    <Content Include="pass.pot" />
+    <Content Include="pass_linux.chr" />
+    <Content Include="pass_linux.pot" />
+    <Content Include="pass_windows.chr" />
+    <Content Include="pass_windows.pot" />
+    <Content Include="Report.md" />
     <Content Include="triatheletes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
