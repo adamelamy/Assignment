@@ -56,6 +56,11 @@ http://www.gwicks.net/dictionaries.htm
 - English: Passwords iterated from English dictionary.
 - Novelist: Names are mined from wikipedia using JS listed in PassGen.py. They are stored in novelist.txt and manipulated using python.
 
+## Performance
+John was ran against hases_linux/widnows_unsolved.txt instead.
+Solved hashes were removed to increase performance in the case where stored passwords in john were removed.
+
+
 ## Hashes Without Hints
 We tried to crack the last two hashes using brute force at first. Neither worked for 8 length ASCII passwords.
 Then we tried to crack it using custom charset obtained from already cracked passwords.
