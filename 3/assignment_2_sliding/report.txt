@@ -1,0 +1,23 @@
+1. To become a CA, we need a private key and a signed root certificate.
+    (i) First, we run "openssl genrsa -des3 -out 333rootCA.key 4096" to generate our private key. -des3 encrypts the key using DES cipher, 4096 is the bit length of the key. We use a random generated passphrase: "q2X6wXVjf3Od".
+    (ii) Then, we create a root certificate (333rootCA.crt) and sign using our private key (333rootCA.key) by running "openssl req -x509 -new -nodes -key 333rootCA.key -sha256 -days 1024 -out 333rootCA.crt". Our organization name is "Group06_W19".
+2. We create a certificate key to generate a certificate signing request (CSR).
+    (i) First, we run "openssl genrsa -out 10.229.6.4.key 2048" to create certificate key.
+    (ii) Then, we edit openssl.cnf (/etc/ssl/openssl.cnf) to set "policy = policy_anything".
+    (iii) Then, we run "openssl req -new -key 10.229.6.4.key -out 10.229.6.4.csr" to generate CSR. Our organization name is "Group06_W19_Web_Services".
+3. We sign the CSR (10.229.6.4.csr) with our CA private key (333rootCA.key) by running "openssl x509 -req -in 10.229.6.4.csr -CA 333rootCA.crt -CAkey 333rootCA.key -CAcreateserial -out 10.229.6.4.crt -days 500 -sha256" and the passphrase set in Step 1(i).
+4. We configure Apache2 to use the signed certificate by editing /etc/apache2/sites-enabled/000-default.conf:
+<VirtualHost *:443>
+        DocumentRoot /var/www/html
+        SSLEngine on
+        SSLCertificateFile /home/keanweng/10.229.6.4.crt
+        SSLCertificateKeyFile /home/keanweng/10.229.6.4.key
+        SSLCertificateChainFile /home/keanweng/333rootCA.crt
+</VirtualHost>
+5. 
+
+
+sudo iptables -R INPUT 3 -s 10.229.0.0/16 -p tcp -m multiport --dports 21,80,443 -j ACCEPT
+sudo iptables -R OUTPUT 3 -d 10.229.0.0/16 -p tcp -m multiport --dports 21,80,443 -j ACCEPT
+
+
