@@ -1,0 +1,35 @@
+10.229.100.151 Server
+	Ping Request to 156 155 154 150 147 144 142 141 139 138 137 136 133 132 131 130 102 101
+	Ping Reply to 138 
+	Send /example.gif back in HTTP using multiple tcp fragments
+	
+10.229.100.154 Client
+	Ping Request to 151
+	Ping Reply to 151
+	HTTP1.1 GET /example.gif
+	Uses wget
+	
+10.229.100.101 Client
+	Ping Request to 151
+	Ping Reply to 151
+	HTTP GET /example.mp3
+	HTTP GET /page.htm
+	Uses wget
+	
+	
+10.229.100.156 TA
+	Ping Request to 151
+	
+10.229.100.102 NA
+	Ping Request to 151
+	DNS query to isatap.cloud.cybera.ca
+	
+	
+10.229.100.150 NA
+	Ping request to 151
+	DNS query to isatap.cloud.cybera.ca
+	
+10.229.100.142 NA
+	Ping request to 151
+
+	

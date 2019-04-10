@@ -1,0 +1,61 @@
+1.0
+2007-01-19
+2007-03-01
+2007-08-29
+2007-10-10
+2007-12-15
+2008-02-01
+2008-09-01
+2009-04-04
+latest")%r(HTTPOptions,EA,"HTTP/1.1 200 OK
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 98
+Date: Tue, 09 Apr 2019 23:30:31 GMT
+Connection: close
+
+1.0
+2007-01-19
+2007-03-01
+2007-08-29
+2007-10-10
+2007-12-15
+2008-02-01
+2008-09-01
+2009-04-04
+latest")%r(RTSPRequest,E0,"<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 400.
+<p>Message: Bad request version ('RTSP/1.0').
+<p>Error code explanation: 400 = Bad request syntax or unsupported method.
+</body>
+")%r(FourOhFourRequest,F8,"HTTP/1.1 500 Internal Server Error
+Content-Length: 93
+Content-Type: text/plain; charset=UTF-8
+Date: Tue, 09 Apr 2019 23:30:36 GMT
+Connection: close
+
+500 Internal Server Error
+
+An unknown error has occurred. Please try your request again.
+
+   ")%r(Help,DB,"<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 400.
+<p>Message: Bad request syntax ('HELP').
+<p>Error code explanation: 400 = Bad request syntax or unsupported method.
+</body>
+")%r(SSLSessionReq,17C,"<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 400.
+<p>Message: Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G\xd7\xf7\xba,\xee\xea\xb2`~\xf3\x00\xfd\x82{\xb9\xd5\x96\xc8w\x9b\xe6\xc4\xdb&lt;=\xdbo\xef\x10n\x00\x00(\x00\x16\x00\x13\x00').
+<p>Error code explanation: 400 = Bad request syntax or unsupported method.
+</body>

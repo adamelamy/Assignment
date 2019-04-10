@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1", "1\1.pyproj", "{BA3A4095-44C3-42B2-B8D4-DE1AA3E3F397}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "2", "2\2.pyproj", "{49D27D83-21D4-431A-AA36-EA320A6C1B8A}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "1_sliding", "1_sliding\1_sliding.pyproj", "{6C8DA0D9-218B-44AE-89E1-89AF77DBB72E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +13,6 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BA3A4095-44C3-42B2-B8D4-DE1AA3E3F397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA3A4095-44C3-42B2-B8D4-DE1AA3E3F397}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49D27D83-21D4-431A-AA36-EA320A6C1B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49D27D83-21D4-431A-AA36-EA320A6C1B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C8DA0D9-218B-44AE-89E1-89AF77DBB72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C8DA0D9-218B-44AE-89E1-89AF77DBB72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
