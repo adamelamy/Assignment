@@ -1,0 +1,720 @@
+# Nmap 6.40 scan initiated Tue Apr  9 23:29:50 2019 as: nmap -oN output.txt -sS -A -p 21,22,80,443,3389 10.229.100.0/24
+Nmap scan report for 10.229.100.101
+Host is up (0.00072s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 01:7d:32:63:62:44:f4:8f:97:4b:60:b1:2b:1f:06:2e (DSA)
+| 2048 94:1b:d9:22:41:35:f7:73:64:b5:74:ca:f2:b4:5d:22 (RSA)
+|_256 1c:5d:f8:6e:e7:07:ac:e9:83:ed:ed:76:d0:18:46:5c (ECDSA)
+80/tcp   closed http
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:00:46:DE (Unknown)
+Aggressive OS guesses: Linux 2.6.32 (96%), Linux 2.6.32 - 3.9 (96%), Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.8 (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 2.6.26 - 2.6.35 (94%), Linux 2.6.32 - 2.6.35 (93%), Linux 2.6.32 - 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.72 ms 10.229.100.101
+
+Nmap scan report for host-10-229-100-102.yeg.cloud.cybera.ca (10.229.100.102)
+Host is up (0.00043s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+80/tcp   open   http?
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+|_http-title: Site doesn't have a title (text/plain; charset=UTF-8).
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port80-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0A%P=x86_64-pc-linux-gnu%r(GetRe
+SF:quest,EA,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/plain;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x2098\r\nDate:\x20Tue,\x2009\x20Apr\x2020
+SF:19\x2023:30:31\x20GMT\r\nConnection:\x20close\r\n\r\n1\.0\n2007-01-19\n
+SF:2007-03-01\n2007-08-29\n2007-10-10\n2007-12-15\n2008-02-01\n2008-09-01\
+SF:n2009-04-04\nlatest")%r(HTTPOptions,EA,"HTTP/1\.1\x20200\x20OK\r\nConte
+SF:nt-Type:\x20text/plain;\x20charset=UTF-8\r\nContent-Length:\x2098\r\nDa
+SF:te:\x20Tue,\x2009\x20Apr\x202019\x2023:30:31\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n1\.0\n2007-01-19\n2007-03-01\n2007-08-29\n2007-10-10\n2007-
+SF:12-15\n2008-02-01\n2008-09-01\n2009-04-04\nlatest")%r(RTSPRequest,E0,"<
+SF:head>\n<title>Error\x20response</title>\n</head>\n<body>\n<h1>Error\x20
+SF:response</h1>\n<p>Error\x20code\x20400\.\n<p>Message:\x20Bad\x20request
+SF:\x20version\x20\('RTSP/1\.0'\)\.\n<p>Error\x20code\x20explanation:\x204
+SF:00\x20=\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.\n<
+SF:/body>\n")%r(FourOhFourRequest,F8,"HTTP/1\.1\x20500\x20Internal\x20Serv
+SF:er\x20Error\r\nContent-Length:\x2093\r\nContent-Type:\x20text/plain;\x2
+SF:0charset=UTF-8\r\nDate:\x20Tue,\x2009\x20Apr\x202019\x2023:30:36\x20GMT
+SF:\r\nConnection:\x20close\r\n\r\n500\x20Internal\x20Server\x20Error\n\nA
+SF:n\x20unknown\x20error\x20has\x20occurred\.\x20Please\x20try\x20your\x20
+SF:request\x20again\.\n\n\x20\x20\x20")%r(Help,DB,"<head>\n<title>Error\x2
+SF:0response</title>\n</head>\n<body>\n<h1>Error\x20response</h1>\n<p>Erro
+SF:r\x20code\x20400\.\n<p>Message:\x20Bad\x20request\x20syntax\x20\('HELP'
+SF:\)\.\n<p>Error\x20code\x20explanation:\x20400\x20=\x20Bad\x20request\x2
+SF:0syntax\x20or\x20unsupported\x20method\.\n</body>\n")%r(SSLSessionReq,1
+SF:7C,"<head>\n<title>Error\x20response</title>\n</head>\n<body>\n<h1>Erro
+SF:r\x20response</h1>\n<p>Error\x20code\x20400\.\n<p>Message:\x20Bad\x20re
+SF:quest\x20syntax\x20\('\\x16\\x03\\x00\\x00S\\x01\\x00\\x00O\\x03\\x00\?
+SF:G\\xd7\\xf7\\xba,\\xee\\xea\\xb2`~\\xf3\\x00\\xfd\\x82{\\xb9\\xd5\\x96\
+SF:\xc8w\\x9b\\xe6\\xc4\\xdb&lt;=\\xdbo\\xef\\x10n\\x00\\x00\(\\x00\\x16\\
+SF:x00\\x13\\x00'\)\.\n<p>Error\x20code\x20explanation:\x20400\x20=\x20Bad
+SF:\x20request\x20syntax\x20or\x20unsupported\x20method\.\n</body>\n");
+MAC Address: FA:16:3E:22:3D:08 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.43 ms host-10-229-100-102.yeg.cloud.cybera.ca (10.229.100.102)
+
+Nmap scan report for host-10-229-100-130.yeg.cloud.cybera.ca (10.229.100.130)
+Host is up (-0.039s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 0        0           41766 Mar 10 22:06 ftpcontent.pdf
+|_-rw-r--r--    1 0        0               4 Mar 10 21:12 test.txt
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 1d:f0:b4:50:de:72:fe:7f:6f:a0:d9:fa:14:54:30:13 (DSA)
+| 2048 9b:54:eb:ce:f8:f0:31:d4:1c:6f:6a:8f:73:aa:b1:18 (RSA)
+|_256 a6:d5:d2:37:6e:3e:0a:0b:36:42:ec:55:0a:af:4d:9b (ECDSA)
+80/tcp   open   http          nginx 1.4.6 (Ubuntu)
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Access!
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Authorization Required
+443/tcp  open   http          nginx 1.4.6 (Ubuntu)
+|_http-methods: No Allow or Public header in OPTIONS response (status code 400)
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+| ssl-cert: Subject: commonName=10.229.1.4/organizationName=Group01_W19_Web_Services/stateOrProvinceName=Some-State/countryName=AU
+| Not valid before: 2019-03-30T20:26:53+00:00
+|_Not valid after:  2020-03-29T20:26:53+00:00
+|_ssl-date: 2024-08-10T23:56:00+00:00; +5y123d0h23m28s from local time.
+| tls-nextprotoneg: 
+|_  http/1.1
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:02:84:52 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-130.yeg.cloud.cybera.ca (10.229.100.130)
+
+Nmap scan report for host-10-229-100-131.yeg.cloud.cybera.ca (10.229.100.131)
+Host is up (-0.051s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-rw-r--    1 1001     1001        17172 Mar 17 05:18 ftpcontent.pdf
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 1a:cd:63:e2:fb:e7:bf:3c:40:86:ab:27:31:0f:a4:b1 (DSA)
+| 2048 43:3d:0f:d3:e4:e0:8b:8e:02:d2:64:a6:3d:83:0f:f4 (RSA)
+|_256 55:95:35:e7:5e:f1:cf:4b:d5:b6:02:43:e5:fa:41:6e (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Content
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Content
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+| ssl-cert: Subject: commonName=Test Server/organizationName=Group2_W19_Web_Services/stateOrProvinceName=Alberta/countryName=CA
+| Not valid before: 2019-03-22T22:48:17+00:00
+|_Not valid after:  2020-01-16T22:48:17+00:00
+|_ssl-date: 2102-03-22T01:45:28+00:00; +82y346d2h12m50s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:00:65:30 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-131.yeg.cloud.cybera.ca (10.229.100.131)
+
+Nmap scan report for host-10-229-100-132.yeg.cloud.cybera.ca (10.229.100.132)
+Host is up (-0.051s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 0        0              13 Mar 15 20:47 ftpcontent.pdf
+|_-rw-r--r--    1 0        0              13 Mar 15 20:41 test.txt
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 00:0b:1e:49:45:b5:b9:9e:79:3b:95:30:e1:0c:c2:b7 (DSA)
+| 2048 e7:52:1e:ae:93:bc:63:0d:7f:e1:4b:36:16:5e:0d:1f (RSA)
+|_256 95:5a:fe:7b:56:91:ff:ef:95:1a:4c:1e:77:cc:33:25 (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Content
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+| ssl-cert: Subject: commonName=10.229.3.5/organizationName=Group03_W19_Web_Services
+| Not valid before: 2019-04-05T22:15:08+00:00
+|_Not valid after:  2020-08-17T22:15:08+00:00
+|_ssl-date: 2082-03-06T17:49:59+00:00; +62y330d18h17m27s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:C4:6B:C5 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.3 - 3.6 (92%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-132.yeg.cloud.cybera.ca (10.229.100.132)
+
+Nmap scan report for host-10-229-100-133.yeg.cloud.cybera.ca (10.229.100.133)
+Host is up (-0.059s latency).
+PORT     STATE    SERVICE       VERSION
+21/tcp   open     ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0              12 Mar 15 23:20 ftpcontent.pdf
+22/tcp   open     ssh           (protocol 2.0)
+| ssh-hostkey: 1024 d4:46:6b:a5:6f:47:71:bf:e8:fc:d2:f8:ef:54:76:f2 (DSA)
+| 2048 a2:dd:d7:0b:5b:1c:4e:e7:d3:54:00:a0:ca:50:de:4b (RSA)
+|_256 9c:83:24:de:c1:a0:cd:2a:94:8f:1f:c3:fa:ef:71:b7 (ECDSA)
+80/tcp   closed   http
+443/tcp  filtered https
+3389/tcp filtered ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:B1:DF:BB (Unknown)
+Device type: storage-misc|WAP|specialized|media device|general purpose|broadband router
+Running (JUST GUESSING): HP embedded (90%), Linux 2.6.X|3.X|2.4.X (88%), Crestron 2-Series (88%), Netgear embedded (88%), Western Digital embedded (88%), Linksys Linux 2.4.X (86%)
+OS CPE: cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:2.6.22 cpe:/o:crestron:2_series cpe:/h:netgear:dg834g cpe:/o:westerndigital:wd_tv cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:2.4 cpe:/o:linksys:linux_kernel:2.4
+Aggressive OS guesses: HP P2000 G3 NAS device (90%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (88%), Crestron XPanel control system (88%), Netgear DG834G WAP or Western Digital WD TV media player (88%), Linux 2.6.22 (88%), Linux 2.6.23 - 2.6.38 (87%), Linux 2.6.31 - 2.6.32 (87%), Linux 2.6.32 (87%), Linux 2.6.32 - 2.6.39 (87%), Linux 2.6.37 (87%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-133.yeg.cloud.cybera.ca (10.229.100.133)
+
+Nmap scan report for host-10-229-100-136.yeg.cloud.cybera.ca (10.229.100.136)
+Host is up (-0.051s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rwxrwxrwx    1 1002     1002       171583 Mar 14 04:18 ftpcontent.pdf [NSE: writeable]
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 02:65:ab:9b:24:f6:3d:6b:a1:00:bb:34:6d:23:2b:1c (DSA)
+| 2048 16:e7:8e:05:8f:a9:2c:2a:ab:25:2b:2d:7c:0f:82:2f (RSA)
+|_256 6c:67:bc:05:7a:b4:68:76:2e:9d:09:d7:9d:18:ac:80 (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Access
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Index of /
+| ssl-cert: Subject: commonName=10.229.100.136/organizationName=Group07_W19/stateOrProvinceName=Alberta/countryName=CA
+| Not valid before: 2019-03-30T02:18:35+00:00
+|_Not valid after:  2020-03-29T02:18:35+00:00
+|_ssl-date: 2104-11-02T01:15:53+00:00; +85y206d1h43m17s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:1B:D9:28 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.3 - 3.6 (92%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-136.yeg.cloud.cybera.ca (10.229.100.136)
+
+Nmap scan report for host-10-229-100-137.yeg.cloud.cybera.ca (10.229.100.137)
+Host is up (-0.051s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 1001     1001            0 Mar 17 19:12 ftpcontent.pdf
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 a0:0a:0f:c2:9b:5f:27:ca:2c:86:ea:b9:73:3e:03:01 (DSA)
+| 2048 37:21:27:93:21:36:4e:8b:9b:b7:d5:82:d6:78:d0:55 (RSA)
+|_256 4f:b3:72:ce:20:3b:7e:d3:28:cb:68:c1:6f:0e:7a:e6 (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Content
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Restricted Content
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+| ssl-cert: Subject: commonName=10.229.8.4/organizationName=Group08_W19_Web_Services/stateOrProvinceName=Alberta/countryName=CA
+| Not valid before: 2019-03-29T22:05:53+00:00
+|_Not valid after:  2024-03-27T22:05:53+00:00
+|_ssl-date: 1970-12-11T04:07:07+00:00; -48y119d19h25m30s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:53:3A:8C (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.2.0 (92%), Linux 3.1 - 3.2 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-137.yeg.cloud.cybera.ca (10.229.100.137)
+
+Nmap scan report for host-10-229-100-138.yeg.cloud.cybera.ca (10.229.100.138)
+Host is up (-0.051s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 ftp      ftp         18538 Mar 18 12:41 ftpcontent.pdf
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 d0:08:21:ab:aa:e9:bc:94:cc:b6:5b:2f:48:df:e5:cb (DSA)
+| 2048 16:65:f0:28:f4:45:34:b5:43:56:b7:08:b7:de:aa:25 (RSA)
+|_256 24:95:07:ed:28:9a:66:04:12:04:97:c2:d4:2f:c9:4a (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=PAM Authentication
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: 403 Forbidden
+| ssl-cert: Subject: commonName=10.229.9.4/organizationName=Group09_W19_Web_Service/stateOrProvinceName=Alberta/countryName=NA
+| Not valid before: 2019-04-04T07:12:13+00:00
+|_Not valid after:  2020-04-03T07:12:13+00:00
+|_ssl-date: 1974-03-10T01:54:08+00:00; -45y30d21h38m30s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B09%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:B9:04:18 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.3 - 3.6 (92%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-138.yeg.cloud.cybera.ca (10.229.100.138)
+
+Nmap scan report for host-10-229-100-139.yeg.cloud.cybera.ca (10.229.100.139)
+Host is up (-0.067s latency).
+PORT     STATE    SERVICE       VERSION
+21/tcp   open     ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+22/tcp   open     ssh           (protocol 2.0)
+| ssh-hostkey: 1024 e2:72:90:73:1d:e9:79:e3:2c:7a:c3:ad:8a:14:34:84 (DSA)
+| 2048 04:7e:e1:f0:c7:50:75:73:76:f7:db:b2:1d:bd:64:93 (RSA)
+|_256 39:f3:fd:5a:e9:52:6a:af:dc:d9:55:2c:e5:39:e3:df (ECDSA)
+80/tcp   open     http          Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+443/tcp  filtered https
+3389/tcp filtered ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:A7:45:66 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|WAP|media device|storage-misc|general purpose|webcam
+Running (JUST GUESSING): Crestron 2-Series (89%), Netgear embedded (89%), Western Digital embedded (89%), HP embedded (86%), Linux 3.X (86%), AXIS Linux 2.6.X (86%)
+OS CPE: cpe:/o:crestron:2_series cpe:/h:netgear:dg834g cpe:/o:westerndigital:wd_tv cpe:/h:hp:p2000_g3 cpe:/o:linux:linux_kernel:3 cpe:/h:axis:210a_network_camera cpe:/h:axis:211_network_camera cpe:/o:axis:linux_kernel:2.6
+Aggressive OS guesses: Crestron XPanel control system (89%), Netgear DG834G WAP or Western Digital WD TV media player (89%), HP P2000 G3 NAS device (86%), Linux 3.1 (86%), Linux 3.2 (86%), AXIS 210A or 211 Network Camera (Linux 2.6) (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-139.yeg.cloud.cybera.ca (10.229.100.139)
+
+Nmap scan report for host-10-229-100-140.yeg.cloud.cybera.ca (10.229.100.140)
+Host is up (-0.051s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0              24 Mar 12 20:04 ftpcontent.pdf
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 6f:3a:cb:93:47:8a:03:0f:1f:63:e0:95:48:4e:13:f4 (DSA)
+| 2048 76:09:25:f4:45:3f:33:2f:44:a9:e9:87:9f:98:8f:e0 (RSA)
+|_256 29:75:3a:1c:d6:ae:27:cf:d6:2f:5f:41:b8:2c:e0:96 (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Index of /
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+| ssl-cert: Subject: commonName=10.229.11.4/organizationName=Group11_W19_Web_Services
+| Not valid before: 2019-03-22T23:20:20+00:00
+|_Not valid after:  2024-09-11T23:20:20+00:00
+|_ssl-date: 2069-06-25T14:11:03+00:00; +50y76d14h38m27s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:BB:1D:57 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.3 - 3.6 (92%), Linux 3.7 - 3.9 (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-140.yeg.cloud.cybera.ca (10.229.100.140)
+
+Nmap scan report for host-10-229-100-141.yeg.cloud.cybera.ca (10.229.100.141)
+Host is up (-0.039s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 ftp      ftp          2057 Mar 29 15:44 ca.crt
+| -rw-r--r--    1 ftp      ftp         41766 Mar 11 23:34 ftpcontent.pdf
+| -rw-r--r--    1 ftp      ftp          1456 Mar 22 16:10 mydomain.com.crt
+| -rw-r--r--    1 ftp      ftp         18279 Apr 05 14:18 nmap.out
+| -rw-r--r--    1 ftp      ftp         30826 Apr 05 14:32 nmapOS.out
+| drwxr-xr-x    2 ftp      ftp          4096 Mar 18 14:09 pub
+| -rw-r--r--    1 ftp      ftp          6746 Mar 29 15:55 server.crt
+|_-rw-r--r--    1 ftp      ftp       5318720 Mar 28 23:28 weak.txt
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 3d:b9:c0:49:76:fd:65:8b:2f:67:36:e4:f3:65:79:48 (DSA)
+| 2048 40:74:73:1c:68:4f:46:a6:c9:cb:f3:28:73:4a:e0:10 (RSA)
+|_256 7f:84:b3:3d:fb:75:45:fe:31:b1:06:48:ad:e2:46:6d (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Login
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   http          Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Index of /
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:E1:8C:9A (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.2.0 (92%), Linux 3.1 - 3.2 (91%), Linux 3.7 - 3.9 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-141.yeg.cloud.cybera.ca (10.229.100.141)
+
+Nmap scan report for host-10-229-100-142.yeg.cloud.cybera.ca (10.229.100.142)
+Host is up (-0.045s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 b9:8f:a1:21:d7:95:8e:a0:d9:b3:64:58:e2:5f:51:61 (DSA)
+| 2048 24:f7:c0:2f:cf:ee:a8:f6:70:77:72:c6:b0:37:6e:8b (RSA)
+|_256 e8:f9:8a:15:8d:92:6d:ef:a6:8b:f8:fa:eb:a0:95:e0 (ECDSA)
+80/tcp   closed http
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:00:91:F2 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-142.yeg.cloud.cybera.ca (10.229.100.142)
+
+Nmap scan report for host-10-229-100-144.yeg.cloud.cybera.ca (10.229.100.144)
+Host is up (-0.044s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 a0:d3:18:59:71:5f:9e:a5:2e:ef:f4:e1:bb:08:13:52 (DSA)
+| 2048 d4:c8:f8:38:de:75:0b:64:06:38:a2:41:b2:a7:56:96 (RSA)
+|_256 61:c1:7b:7b:bc:c0:06:61:3c:2a:62:e7:52:27:e6:83 (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:A5:A2:7E (Unknown)
+Aggressive OS guesses: Linux 2.6.32 (96%), Linux 2.6.32 - 3.9 (96%), Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.8 (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 2.6.26 - 2.6.35 (94%), Linux 2.6.32 - 2.6.35 (93%), Linux 2.6.32 - 3.2 (93%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-144.yeg.cloud.cybera.ca (10.229.100.144)
+
+Nmap scan report for host-10-229-100-147.yeg.cloud.cybera.ca (10.229.100.147)
+Host is up (-0.051s latency).
+PORT     STATE    SERVICE       VERSION
+21/tcp   open     ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 0        0            1464 Mar 28 17:44 cacert.crt
+| -rw-r--r--    1 0        0            1704 Mar 28 18:18 cakey.key
+| -rw-r--r--    1 0        0            2637 Mar 28 18:22 cert.pfx
+| -rw-r--r--    1 0        0            3028 Mar 18 19:48 ftpcontent.pdf
+|_-rw-r--r--    1 0        0            1383 Mar 28 17:53 servercert.crt
+22/tcp   open     ssh           (protocol 2.0)
+| ssh-hostkey: 1024 55:79:9d:91:42:1b:f5:c7:84:1b:14:ef:7d:d9:5c:7e (DSA)
+| 2048 cf:42:6a:71:45:5b:5c:64:0e:6e:5c:4e:2e:91:31:65 (RSA)
+|_256 7e:39:88:97:c7:24:60:cc:21:c6:f9:f0:b4:75:a3:d1 (ECDSA)
+80/tcp   open     http          Apache httpd 2.4.38 ((Unix) OpenSSL/1.0.1f)
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=group5 restricted access
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open     ssl/http      Apache httpd 2.4.38 ((Unix) OpenSSL/1.0.1f)
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=group5 restricted access
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+| ssl-cert: Subject: commonName=10.229.5.7/organizationName=Group05_W19_Web_Services
+| Not valid before: 2019-03-29T19:45:16+00:00
+|_Not valid after:  2020-03-28T19:45:16+00:00
+|_ssl-date: 2055-11-08T05:45:54+00:00; +36y212d6h13m22s from local time.
+3389/tcp filtered ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B0F%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:9F:8D:2F (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Crestron XPanel control system (89%), Netgear DG834G WAP or Western Digital WD TV media player (89%), HP P2000 G3 NAS device (86%), Linux 3.1 (86%), Linux 3.2 (86%), AXIS 210A or 211 Network Camera (Linux 2.6) (86%), Linux 2.6.26 - 2.6.35 (85%), Linux 3.3 - 3.6 (85%), Linux 3.4 (85%), Linux 3.7 - 3.9 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-147.yeg.cloud.cybera.ca (10.229.100.147)
+
+Nmap scan report for host-10-229-100-150.yeg.cloud.cybera.ca (10.229.100.150)
+Host is up (-0.044s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+80/tcp   open   http?
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+|_http-title: Site doesn't have a title (text/plain; charset=UTF-8).
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port80-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B15%P=x86_64-pc-linux-gnu%r(GetRe
+SF:quest,EA,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/plain;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x2098\r\nDate:\x20Tue,\x2009\x20Apr\x2020
+SF:19\x2023:30:43\x20GMT\r\nConnection:\x20close\r\n\r\n1\.0\n2007-01-19\n
+SF:2007-03-01\n2007-08-29\n2007-10-10\n2007-12-15\n2008-02-01\n2008-09-01\
+SF:n2009-04-04\nlatest")%r(HTTPOptions,EA,"HTTP/1\.1\x20200\x20OK\r\nConte
+SF:nt-Type:\x20text/plain;\x20charset=UTF-8\r\nContent-Length:\x2098\r\nDa
+SF:te:\x20Tue,\x2009\x20Apr\x202019\x2023:30:43\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n1\.0\n2007-01-19\n2007-03-01\n2007-08-29\n2007-10-10\n2007-
+SF:12-15\n2008-02-01\n2008-09-01\n2009-04-04\nlatest")%r(RTSPRequest,E0,"<
+SF:head>\n<title>Error\x20response</title>\n</head>\n<body>\n<h1>Error\x20
+SF:response</h1>\n<p>Error\x20code\x20400\.\n<p>Message:\x20Bad\x20request
+SF:\x20version\x20\('RTSP/1\.0'\)\.\n<p>Error\x20code\x20explanation:\x204
+SF:00\x20=\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.\n<
+SF:/body>\n")%r(FourOhFourRequest,F8,"HTTP/1\.1\x20500\x20Internal\x20Serv
+SF:er\x20Error\r\nContent-Length:\x2093\r\nContent-Type:\x20text/plain;\x2
+SF:0charset=UTF-8\r\nDate:\x20Tue,\x2009\x20Apr\x202019\x2023:30:48\x20GMT
+SF:\r\nConnection:\x20close\r\n\r\n500\x20Internal\x20Server\x20Error\n\nA
+SF:n\x20unknown\x20error\x20has\x20occurred\.\x20Please\x20try\x20your\x20
+SF:request\x20again\.\n\n\x20\x20\x20")%r(Help,DB,"<head>\n<title>Error\x2
+SF:0response</title>\n</head>\n<body>\n<h1>Error\x20response</h1>\n<p>Erro
+SF:r\x20code\x20400\.\n<p>Message:\x20Bad\x20request\x20syntax\x20\('HELP'
+SF:\)\.\n<p>Error\x20code\x20explanation:\x20400\x20=\x20Bad\x20request\x2
+SF:0syntax\x20or\x20unsupported\x20method\.\n</body>\n")%r(SSLSessionReq,1
+SF:7C,"<head>\n<title>Error\x20response</title>\n</head>\n<body>\n<h1>Erro
+SF:r\x20response</h1>\n<p>Error\x20code\x20400\.\n<p>Message:\x20Bad\x20re
+SF:quest\x20syntax\x20\('\\x16\\x03\\x00\\x00S\\x01\\x00\\x00O\\x03\\x00\?
+SF:G\\xd7\\xf7\\xba,\\xee\\xea\\xb2`~\\xf3\\x00\\xfd\\x82{\\xb9\\xd5\\x96\
+SF:\xc8w\\x9b\\xe6\\xc4\\xdb&lt;=\\xdbo\\xef\\x10n\\x00\\x00\(\\x00\\x16\\
+SF:x00\\x13\\x00'\)\.\n<p>Error\x20code\x20explanation:\x20400\x20=\x20Bad
+SF:\x20request\x20syntax\x20or\x20unsupported\x20method\.\n</body>\n");
+MAC Address: FA:16:3E:64:E1:48 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.1 - 3.2 (91%), Linux 3.3 - 3.6 (91%), Linux 2.4.26 (Slackware 10.0.0) (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  host-10-229-100-150.yeg.cloud.cybera.ca (10.229.100.150)
+
+Nmap scan report for victimswindowsinstance.yeg.cloud.cybera.ca (10.229.100.151)
+Host is up (-0.045s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   closed ssh
+80/tcp   open   http          Microsoft IIS httpd 8.5
+| http-methods: Potentially risky methods: TRACE
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+|_http-title: IIS Windows Server
+443/tcp  closed https
+3389/tcp open   ms-wbt-server Microsoft Terminal Service
+MAC Address: FA:16:3E:BD:7A:D3 (Unknown)
+Device type: general purpose
+Running: Microsoft Windows 7|2012
+OS CPE: cpe:/o:microsoft:windows_7:::ultimate cpe:/o:microsoft:windows_2012
+OS details: Microsoft Windows 7 or Windows Server 2012
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  victimswindowsinstance.yeg.cloud.cybera.ca (10.229.100.151)
+
+Nmap scan report for logger.yeg.cloud.cybera.ca (10.229.100.154)
+Host is up (-0.039s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 59:af:fa:95:aa:86:47:50:7f:14:ba:fb:bf:cb:1d:25 (DSA)
+| 2048 1f:b4:b9:cf:ee:df:34:13:4c:9b:5b:9b:1f:32:38:27 (RSA)
+|_256 74:32:99:b3:06:f8:6b:e2:e5:94:67:d9:b6:b5:d5:ec (ECDSA)
+80/tcp   closed http
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B15%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:A6:18:7E (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (93%), Linux 3.2 (93%), AXIS 210A or 211 Network Camera (Linux 2.6) (92%), Linux 2.4.26 (Slackware 10.0.0) (91%), Crestron XPanel control system (91%), Linux 3.7 - 3.9 (91%), ODROID-U2 Android development board (Linux 3.0) (91%), Linux 2.6.22 (90%), Linux 2.6.24 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  logger.yeg.cloud.cybera.ca (10.229.100.154)
+
+Nmap scan report for greatta1fw.yeg.cloud.cybera.ca (10.229.100.155)
+Host is up (-0.045s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 8d:18:70:6c:20:bf:3c:62:2f:36:45:80:74:dd:89:1d (DSA)
+| 2048 d8:41:45:fd:b4:bb:9f:6c:4a:01:c2:9d:4d:af:08:b5 (RSA)
+|_256 e5:de:fd:60:0d:a6:6c:62:6f:27:60:c5:ef:ea:24:ea (ECDSA)
+80/tcp   closed http
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B15%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+MAC Address: FA:16:3E:D1:A7:05 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), ODROID-U2 Android development board (Linux 3.0) (92%), Linux 2.6.32 (92%), Linux 3.6.10 (92%), Linux 3.9 (92%), Linux 2.6.32 - 3.6 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Unix
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  greatta1fw.yeg.cloud.cybera.ca (10.229.100.155)
+
+Nmap scan report for arptest.yeg.cloud.cybera.ca (10.229.100.156)
+Host is up (-0.045s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   closed ftp
+22/tcp   open   ssh           (protocol 2.0)
+|_ssh-hostkey: ERROR: Script execution failed (use -d to debug)
+80/tcp   closed http
+443/tcp  closed https
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2B15%P=x86_64-pc-linux-gnu%r(NULL,
+SF:29,"SSH-2\.0-OpenSSH_7\.6p1\x20Ubuntu-4ubuntu0\.3\r\n");
+MAC Address: FA:16:3E:FE:09:D1 (Unknown)
+Aggressive OS guesses: Netgear DG834G WAP or Western Digital WD TV media player (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6) (94%), Linux 3.7 - 3.9 (92%), Linux 2.6.32 - 3.6 (92%), Linux 2.6.32 - 3.9 (92%), Linux 3.1 - 3.2 (91%), Linux 3.3 - 3.6 (91%), Linux 2.4.26 (Slackware 10.0.0) (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  arptest.yeg.cloud.cybera.ca (10.229.100.156)
+
+Nmap scan report for host-10-229-100-135.yeg.cloud.cybera.ca (10.229.100.135)
+Host is up (0.000059s latency).
+PORT     STATE  SERVICE       VERSION
+21/tcp   open   ftp           vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--    1 0        0              60 Mar 15 21:34 ftpcontent.pdf
+| drwxr-xr-x    2 0        0            4096 Mar 15 21:28 pub
+|_-rw-r--r--    1 0        0               8 Mar 15 21:31 sample.text
+22/tcp   open   ssh           (protocol 2.0)
+| ssh-hostkey: 1024 53:f3:a4:af:1f:1f:e2:d7:06:62:09:f3:3f:72:d9:2c (DSA)
+| 2048 63:0d:9d:fe:ff:c3:f2:67:59:64:0f:c0:f3:b0:ff:ed (RSA)
+|_256 10:ce:89:a9:04:fb:cf:9d:6c:78:a7:9d:d0:18:6d:b9 (ECDSA)
+80/tcp   open   http          Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Authentication Required
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+443/tcp  open   ssl/http      Apache httpd 2.4.7 ((Ubuntu))
+| http-auth: 
+| HTTP/1.1 401 Unauthorized
+|_  Basic realm=Authentication Required
+|_http-methods: No Allow or Public header in OPTIONS response (status code 401)
+|_http-title: 401 Unauthorized
+| ssl-cert: Subject: commonName=10.229.6.4/organizationName=Group06_W19_Web_Services/stateOrProvinceName=Alberta/countryName=CA
+| Not valid before: 2019-04-01T05:55:58+00:00
+|_Not valid after:  2020-08-13T05:55:58+00:00
+|_ssl-date: 2031-04-27T03:54:08+00:00; +12y17d4h20m31s from local time.
+3389/tcp closed ms-wbt-server
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=4/9%Time=5CAD2BBB%P=x86_64-pc-linux-gnu%r(NULL,
+SF:2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+No exact OS matches for host (If you know what OS is running on it, see http://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=6.40%E=4%D=4/9%OT=21%CT=3389%CU=37380%PV=Y%DS=0%DC=L%G=Y%TM=5CAD2
+OS:BD2%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10B%TI=Z%CI=I%TS=8)SEQ(SP
+OS:=106%GCD=1%ISR=10B%TI=Z%TS=8)OPS(O1=MFFD7ST11NW7%O2=MFFD7ST11NW7%O3=MFFD
+OS:7NNT11NW7%O4=MFFD7ST11NW7%O5=MFFD7ST11NW7%O6=MFFD7ST11)WIN(W1=AAAA%W2=AA
+OS:AA%W3=AAAA%W4=AAAA%W5=AAAA%W6=AAAA)ECN(R=Y%DF=Y%T=40%W=AAAA%O=MFFD7NNSNW
+OS:7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF
+OS:=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RI
+OS:PCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 0 hops
+Service Info: OS: Unix
+
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+# Nmap done at Tue Apr  9 23:33:38 2019 -- 256 IP addresses (21 hosts up) scanned in 227.92 seconds

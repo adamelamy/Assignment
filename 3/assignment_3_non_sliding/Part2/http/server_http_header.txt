@@ -1,0 +1,9 @@
+HTTP/1.1 206 Partial Content
+Content-Type: image/gif
+Last-Modified: Thu, 28 Mar 2019 08:12:06 GMT
+Accept-Ranges: bytes
+ETag: "0cfa2ee3de5d41:0"
+Server: Microsoft-IIS/8.5
+Date: Wed, 10 Apr 2019 04:51:44 GMT
+Content-Length: 10453037
+Content-Range: bytes 1170-10454206/10454207
